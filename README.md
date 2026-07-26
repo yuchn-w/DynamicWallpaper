@@ -8,7 +8,7 @@
 
 ## 直接下載
 
-不需要寫程式，請前往 [GitHub Releases](https://github.com/yuchn-w/DynamicWallpaper/releases/latest) 下載最新的 macOS ZIP，解壓縮後即可取得「動態壁紙.app」。目前下載版適用於 Apple Silicon Mac，並需要 macOS 14 或更新版本。
+不需要寫程式，請前往 [GitHub Releases](https://github.com/yuchn-w/DynamicWallpaper/releases) 下載最新的 macOS ZIP，解壓縮後即可取得「動態壁紙.app」。目前下載版適用於 Apple Silicon Mac，並需要 macOS 14 或更新版本。
 
 目前公開下載版採本機臨時簽章，尚未經 Apple 公證。第一次開啟時若 macOS 顯示無法確認開發者，請在 Finder 對 App 按右鍵並選擇「打開」，再於提示中確認。
 
@@ -92,7 +92,7 @@ The app works locally without an account, cloud service, advertisements, or anal
 
 ## Download
 
-No coding is required. Open [GitHub Releases](https://github.com/yuchn-w/DynamicWallpaper/releases/latest), download the latest macOS ZIP, and extract it to get `動態壁紙.app`. The current download supports Apple Silicon Macs running macOS 14 or later.
+No coding is required. Open [GitHub Releases](https://github.com/yuchn-w/DynamicWallpaper/releases), download the latest macOS ZIP, and extract it to get `動態壁紙.app`. The current download supports Apple Silicon Macs running macOS 14 or later.
 
 The current public build uses a local ad-hoc signature and is not notarized by Apple. If macOS cannot verify the developer on first launch, Control-click the app in Finder, choose **Open**, and confirm the prompt.
 
