@@ -17,11 +17,11 @@ permissions:
 jobs:
   release:
     name: 建置並發布
-    runs-on: macos-14
+    runs-on: macos-15
 
     steps:
       - name: 取得原始碼
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 建置及封裝 Apple Silicon 版本
         run: ./script/package_release.sh
