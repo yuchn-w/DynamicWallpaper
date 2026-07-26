@@ -1,8 +1,12 @@
 # 動態壁紙
 
+[繁體中文](#動態壁紙) ｜ [English](#dynamic-wallpaper)
+
 一款輕量、本機優先的原生 macOS 動態桌布播放器。它專注於播放你自己的影片桌布，提供個別顯示器控制、日夜播放清單、節能暫停及舒適的環境音整合。
 
 專案不需要帳號、不連接雲端，也不含廣告或分析追蹤。所有程式碼與視覺資產均為原創。
+
+> 目前 GitHub 提供的是原始碼，尚未提供可直接下載安裝的 App。一般使用者需要先依照下方步驟在 Mac 上建置。
 
 ## 主要功能
 
@@ -73,3 +77,53 @@ build/動態壁紙.app
 ## 授權
 
 本專案原始碼採 MIT 授權；第三方使用者需自行確認所使用桌布影片與聲音素材的授權。
+
+---
+
+# Dynamic Wallpaper
+
+Dynamic Wallpaper is a lightweight, privacy-focused native macOS app that turns your own video files into animated desktop wallpapers. It provides persistent per-display controls, day and night playlists, power-saving playback rules, and optional ambient sounds in a calm, glass-inspired interface.
+
+The app works locally without an account, cloud service, advertisements, or analytics. The source code and visual assets in this repository are original.
+
+> This repository currently provides source code only. A ready-to-install app download is not available yet.
+
+## Key Features
+
+- Import MP4, MOV, M4V, and other video formats supported by macOS
+- Keep a local wallpaper library with thumbnails and media information
+- Enable or disable animated wallpapers separately for each display
+- Preserve display settings after switching wallpapers
+- Create regular playlists and combined day/night playlists
+- Automatically switch between daytime and nighttime wallpapers at 06:00 and 18:00
+- Pause playback on battery power, during display sleep, in Low Power Mode, or while another app is full screen
+- Limit playback resolution to 4K, 1440p, or 1080p
+- Use optional video audio or locally available Apple background sounds
+- Automatically pause ambient sound while other media is playing
+- Control playback from the menu bar and optionally hide the Dock icon
+- Keep wallpapers, playlists, and preferences entirely on the Mac
+
+## Requirements
+
+- macOS 14 or later
+- Apple Silicon Mac
+- Xcode Command Line Tools and Swift 6
+
+## Build and Run
+
+```zsh
+chmod +x build_app.sh script/build_and_run.sh
+./script/build_and_run.sh --verify
+```
+
+The built app will be available at:
+
+```text
+build/動態壁紙.app
+```
+
+The repository does not include personal wallpaper videos, test videos, macOS system sound files, compiled apps, installers, or build caches.
+
+## License
+
+The source code is available under the MIT License. Users are responsible for confirming that they have permission to use and distribute their own wallpaper videos and audio files.
