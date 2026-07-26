@@ -17,7 +17,7 @@ env \
     SWIFT_MODULE_CACHE_PATH=/private/tmp/dynamic-wallpaper-swift-cache \
     SWIFTPM_MODULECACHE_OVERRIDE=/private/tmp/dynamic-wallpaper-swiftpm-cache \
     SDKROOT="$SDK_PATH" \
-    swift build --disable-sandbox -c release
+    swift build --disable-sandbox -c release --arch arm64
 
 if [[ -d "$APP_BUNDLE" ]]; then
     rm -rf "$APP_BUNDLE"
