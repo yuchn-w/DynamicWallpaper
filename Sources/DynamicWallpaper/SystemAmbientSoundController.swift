@@ -216,11 +216,21 @@ final class SystemAmbientSoundController: ObservableObject {
     }
 
     private func soundURL(for sound: AmbientSoundOption) -> URL? {
-        Bundle.main.url(
+        if let bundledURL = Bundle.main.url(
             forResource: sound.id,
             withExtension: "m4a",
             subdirectory: "AppleComfortSounds"
+        ) {
+            return bundledURL
+        }
+
+        // 公開發行版本不夾帶 macOS 系統音檔，改為讀取使用者自己的 Mac 既有資源。
+        let systemDirectory = URL(fileURLWithPath:
+            "/System/Library/PrivateFrameworks/HearingUtilities.framework/Versions/A/Resources",
+            isDirectory: true
         )
+        let systemURL = systemDirectory.appendingPathComponent("\(sound.id).m4a")
+        return FileManager.default.isReadableFile(atPath: systemURL.path) ? systemURL : nil
     }
 
     private static func normalizedVolume(_ value: Double) -> Double {
