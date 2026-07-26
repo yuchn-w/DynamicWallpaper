@@ -1,0 +1,11 @@
+# 此檔案由 Codex 自動產生，請勿手動修改
+version = 1
+name = "動態壁紙"
+
+[setup]
+script = ""
+
+[[actions]]
+name = "Run"
+icon = "run"
+command = "./script/build_and_run.sh"
