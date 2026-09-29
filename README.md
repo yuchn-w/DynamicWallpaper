@@ -1,2 +1,137 @@
-# DynamicWallpaper
-A lightweight, privacy-focused macOS video wallpaper player with per-display controls, day/night playlists, power-saving playback, and ambient sounds.
+# 動態壁紙
+
+[繁體中文](#動態壁紙) ｜ [English](#dynamic-wallpaper)
+
+一款輕量、本機優先的原生 macOS 動態桌布播放器。它專注於播放你自己的影片桌布，提供個別顯示器控制、日夜播放清單、節能暫停及舒適的環境音整合。
+
+專案不需要帳號、不連接雲端，也不含廣告或分析追蹤。所有程式碼與視覺資產均為原創。
+
+## 直接下載
+
+不需要寫程式，請前往 [GitHub Releases](https://github.com/yuchn-w/DynamicWallpaper/releases) 下載最新的 macOS ZIP，解壓縮後即可取得「動態壁紙.app」。目前下載版適用於 Apple Silicon Mac，並需要 macOS 14 或更新版本。
+
+目前公開下載版採本機臨時簽章，尚未經 Apple 公證。第一次開啟時若 macOS 顯示無法確認開發者，請在 Finder 對 App 按右鍵並選擇「打開」，再於提示中確認。
+
+## 主要功能
+
+- 匯入或拖放 MP4、MOV、M4V 與 macOS 支援的影片格式
+- 自動建立本機媒體庫、縮圖與影片資訊
+- 收藏、搜尋、重新命名及可還原移除
+- 個別設定每一部顯示器是否播放；更換桌布後仍保留設定
+- 多螢幕共用影片來源，降低重複解碼負擔
+- 限制最高播放解析度為 4K、1440p 或 1080p
+- 建立一般播放清單及日夜播放清單
+- 日間 06:00～18:00、夜間 18:00～隔日 06:00 自動切換
+- 每個時段每日只輪換一次，清單內桌布數量不設上限
+- 電池供電、螢幕休眠、低耗電模式或其他 App 全螢幕時自動暫停
+- 可播放影片內建音訊，預設為靜音
+- 整合這台 Mac 已有的 Apple 背景聲音，支援 10% 音量級距及其他媒體播放時自動避讓
+- 選單列快速控制，並可選擇不在 Dock 顯示
+- 原創液態玻璃介面與雨夜風格圖示
+
+## 系統需求
+
+- macOS 14 或更新版本
+- Apple Silicon Mac
+- Xcode 命令列工具及 Swift 6
+
+## 建置與執行
+
+在終端機進入專案資料夾後執行：
+
+```zsh
+chmod +x build_app.sh script/build_and_run.sh
+./script/build_and_run.sh --verify
+```
+
+完成後的 App 位於：
+
+```text
+build/動態壁紙.app
+```
+
+App 會在執行時讀取該 Mac 原本具備的背景聲音資源。GitHub 倉庫與公開下載檔都不包含這些聲音檔；若系統版本沒有對應資源，App 仍可正常播放動態桌布，只是不會顯示環境音選項。
+
+## 本機資料
+
+匯入的影片與資料庫保存在：
+
+```text
+~/Library/Application Support/動態壁紙/
+```
+
+刪除專案原始碼不會自動刪除這個資料夾。GitHub 倉庫也不會讀取或上傳其中內容。
+
+## 隱私
+
+- 不需要登入或授權碼
+- 不收集使用狀況與硬體資料
+- 不上傳桌布、播放清單或偏好設定
+- 媒體掃描、縮圖與播放均在本機完成
+
+## 公開內容範圍
+
+倉庫僅包含 App 原始碼、原創圖示及建置工具，不包含：
+
+- 使用者匯入的桌布影片
+- 測試影片
+- macOS 系統背景聲音檔
+- 編譯完成的 App、安裝包與快取
+
+## 授權
+
+本專案原始碼採 MIT 授權；第三方使用者需自行確認所使用桌布影片與聲音素材的授權。
+
+---
+
+# Dynamic Wallpaper
+
+Dynamic Wallpaper is a lightweight, privacy-focused native macOS app that turns your own video files into animated desktop wallpapers. It provides persistent per-display controls, day and night playlists, power-saving playback rules, and optional ambient sounds in a calm, glass-inspired interface.
+
+The app works locally without an account, cloud service, advertisements, or analytics. The source code and visual assets in this repository are original.
+
+## Download
+
+No coding is required. Open [GitHub Releases](https://github.com/yuchn-w/DynamicWallpaper/releases), download the latest macOS ZIP, and extract it to get `動態壁紙.app`. The current download supports Apple Silicon Macs running macOS 14 or later.
+
+The current public build uses a local ad-hoc signature and is not notarized by Apple. If macOS cannot verify the developer on first launch, Control-click the app in Finder, choose **Open**, and confirm the prompt.
+
+## Key Features
+
+- Import MP4, MOV, M4V, and other video formats supported by macOS
+- Keep a local wallpaper library with thumbnails and media information
+- Enable or disable animated wallpapers separately for each display
+- Preserve display settings after switching wallpapers
+- Create regular playlists and combined day/night playlists
+- Automatically switch between daytime and nighttime wallpapers at 06:00 and 18:00
+- Pause playback on battery power, during display sleep, in Low Power Mode, or while another app is full screen
+- Limit playback resolution to 4K, 1440p, or 1080p
+- Use optional video audio or locally available Apple background sounds
+- Automatically pause ambient sound while other media is playing
+- Control playback from the menu bar and optionally hide the Dock icon
+- Keep wallpapers, playlists, and preferences entirely on the Mac
+
+## Requirements
+
+- macOS 14 or later
+- Apple Silicon Mac
+- Xcode Command Line Tools and Swift 6
+
+## Build and Run
+
+```zsh
+chmod +x build_app.sh script/build_and_run.sh
+./script/build_and_run.sh --verify
+```
+
+The built app will be available at:
+
+```text
+build/動態壁紙.app
+```
+
+The repository does not include personal wallpaper videos, test videos, macOS system sound files, compiled apps, installers, or build caches.
+
+## License
+
+The source code is available under the MIT License. Users are responsible for confirming that they have permission to use and distribute their own wallpaper videos and audio files.

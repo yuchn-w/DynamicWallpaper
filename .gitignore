@@ -1,0 +1,15 @@
+.DS_Store
+.build/
+build/
+dist/
+work/
+outputs/
+.swiftpm/
+DerivedData/
+TestAssets/
+*.dSYM/
+*.zip
+*.dmg
+*.pkg
+Resources/yt-dlp_macos
+*.xcuserstate
