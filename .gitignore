@@ -1,0 +1,12 @@
+.DS_Store
+.build/
+build/
+dist/
+.swiftpm/
+DerivedData/
+TestAssets/
+*.dSYM/
+*.zip
+*.dmg
+*.pkg
+*.xcuserstate
